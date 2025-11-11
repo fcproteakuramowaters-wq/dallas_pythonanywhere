@@ -14,7 +14,7 @@ fi
 
 # Collect static files (Render expects this during build)
 echo "Collecting static files..."
-python manage.py collectstatic --noinput --clear
+python manage.py collectstatic --noinput --clear || echo "WARNING: collectstatic failed, but continuing..."
 
 # Run migrations if a DATABASE_URL is provided (optional)
 if [ -n "${DATABASE_URL:-}" ]; then

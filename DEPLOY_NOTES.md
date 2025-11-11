@@ -51,7 +51,15 @@ gunicorn -b 0.0.0.0:10000 dallas.wsgi
 
 - WhiteNoise middleware is configured to serve static files efficiently.
 - `collectstatic` runs during the build process and places files in `staticfiles/`.
-- No additional static file hosting required.
+- Using `CompressedStaticFilesStorage` for better Render compatibility.
+- No additional static file hosting required beyond what Render provides.
+
+**If static files are not loading on Render:**
+1. Check that `collectstatic` completed successfully in the build logs
+2. Verify the `staticfiles/` directory exists after build
+3. Ensure `STATIC_URL = '/static/'` and `STATIC_ROOT` are set correctly
+4. Render serves files from disk automatically — WhiteNoise handles compression
+5. Clear browser cache (Ctrl+Shift+Delete) and do a hard refresh (Ctrl+F5)
 
 ## Security Settings
 

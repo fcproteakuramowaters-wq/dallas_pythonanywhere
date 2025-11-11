@@ -124,8 +124,9 @@ STATICFILES_DIRS = [BASE_DIR / 'static']
 # Directory where `collectstatic` will gather static files for production (Render expects this)
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 
-# WhiteNoise compression and caching for static files
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+# WhiteNoise storage - use simple storage for better compatibility with Render
+# (CompressedManifestStaticFilesStorage can cause issues if manifest isn't generated properly)
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
 
 # Production security settings for Render
 if not DEBUG:

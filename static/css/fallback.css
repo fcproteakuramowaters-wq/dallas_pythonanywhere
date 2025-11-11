@@ -1,0 +1,35 @@
+/* Minimal fallback styles for critical layout when Tailwind isn't available */
+/* Utility mappings used in templates */
+.hidden{display:none!important}
+.pt-20{padding-top:5rem!important}
+.text-white{color:#fff!important}
+.bg-gray-800{background-color:#1f2937!important}
+.bg-gray-900{background-color:#111827!important}
+.bg-opacity-95{background-color:rgba(31,41,55,0.95)!important}
+.z-50{z-index:50!important}
+.flex{display:flex!important}
+.items-center{align-items:center!important}
+.justify-between{justify-content:space-between!important}
+.px-6{padding-left:1.5rem!important;padding-right:1.5rem!important}
+.py-4{padding-top:1rem!important;padding-bottom:1rem!important}
+.max-w-7xl{max-width:80rem;margin-left:auto;margin-right:auto!important}
+.mx-auto{margin-left:auto;margin-right:auto!important}
+.w-full{width:100%!important}
+.h-12{height:3rem!important}
+.object-contain{object-fit:contain!important}
+.text-gray-200{color:#e5e7eb!important}
+.text-gray-900{color:#111827!important}
+.bg-white{background-color:#ffffff!important}
+.rounded-lg{border-radius:0.5rem!important}
+.shadow{box-shadow:0 1px 3px rgba(0,0,0,0.1)!important}
+.shadow-lg{box-shadow:0 10px 30px rgba(0,0,0,0.12)!important}
+
+/* Mobile menu specific */
+#mobile-menu{display:none}
+#mobile-menu.show{display:block}
+
+/* Make footer stick to bottom if content short */
+footer{width:100%}
+
+/* Ensure image responsiveness fallback */
+img{max-width:100%;height:auto;display:block}
